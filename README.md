@@ -1,4 +1,3 @@
-# jasoncookdesign.github.io
-Jason Cook Design
+# Jason Cook Design
 
-This is a single-user staging source for the [Jason Cook Design website](https://www.jasoncookdesign.com). You probably got here by accident.
+This is the staging platform to migrate the [Jason Cook Design homepage](https://www.jasoncookdesign.com) to Github Pages.
