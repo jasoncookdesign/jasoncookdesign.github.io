@@ -1,3 +1,3 @@
 # Jason Cook Design
 
-This is the staging platform to migrate the [Jason Cook Design homepage](https://jasoncookdesign.com) to Github Pages.
+This is the hosting platform for the [Jason Cook Design](https://jasoncookdesign.com) homepage.
