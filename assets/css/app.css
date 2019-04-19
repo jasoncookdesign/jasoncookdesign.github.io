@@ -6815,7 +6815,7 @@ p {
   line-height: 7vw;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   /* line 59, /Users/jcodec/Dev/jasoncookdesign.github.io/assets/css/scss/elements/_typography.scss */
   .display-1-flex {
     font-size: 96px;
@@ -6829,11 +6829,11 @@ p {
   line-height: 5vw;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   /* line 71, /Users/jcodec/Dev/jasoncookdesign.github.io/assets/css/scss/elements/_typography.scss */
-  .display-1-flex {
-    font-size: 88px;
-    font-size: 96px;
+  .display-2-flex {
+    font-size: 72px;
+    line-height: 88px;
   }
 }
 

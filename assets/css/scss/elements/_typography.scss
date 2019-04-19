@@ -55,7 +55,7 @@ p {
 	line-height: 7vw; 
 }
 
-@include breakpoint-above(lg) {
+@include breakpoint-above(xl) {
 	.display-1-flex {
 		font-size: 96px;
 		line-height: 108px; 
@@ -67,10 +67,10 @@ p {
 	line-height: 5vw; 
 }
 
-@include breakpoint-above(lg) {
-	.display-1-flex {
-		font-size: 88px;
-		font-size: 96px;
+@include breakpoint-above(xl) {
+	.display-2-flex {
+		font-size: 72px;
+		line-height: 88px;
 	}
 } 
 
