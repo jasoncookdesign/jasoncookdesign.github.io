@@ -2,55 +2,63 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="We designed the world's first point-of-sale system for muti-touch devices. Come see how we can help you invent your future." />
-  <meta name="keywords" content="experience design, user experience, UX design, UI design, software architecture, business strategy, custom applications, interface engineering, digital transformation, enterprise solutions, startup platforms, design consulting, UX modernization, experience strategy, design direction, front-end development, application design, user research, Jason Cook Design, Austin design consultancy, creative direction, interactive design, service design, digital experiences, visual design, customer experience, responsive design, touch interface, mobile-first design">
-  <title> Jason Cook Design | Experience Design, Business Strategy, User Research, Software Architecture, and Interface Engineering </title>
-  <link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet" />
-  <link href="assets/plugins/owl-carousel/owl.theme.default.min.css" rel="stylesheet" />
-  <link href="assets/plugins/magnific-popup/magnific-popup.min.css" rel="stylesheet" />
-  <link href="assets/css/app.css" rel="stylesheet" />
-  <link href="assets/plugins/font-awesome/css/all.css" rel="stylesheet" />
-  <link href="assets/plugins/themify/themify-icons.min.css" rel="stylesheet" />
-  <link href="assets/images/favicon.png" rel="shortcut icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
-  <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="We designed the world's first point-of-sale system for muti-touch devices. Come see how we can help you invent your future.">
+  <meta name="keywords"
+    content="experience design, user experience, UX design, UI design, software architecture, business strategy, custom applications, interface engineering, digital transformation, enterprise solutions, startup platforms, design consulting, UX modernization, experience strategy, design direction, front-end development, application design, user research, Jason Cook Design, Austin design consultancy, creative direction, interactive design, service design, digital experiences, visual design, customer experience, responsive design, touch interface, mobile-first design">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title> Jason Cook Design | Experience Design, Business Strategy, User Research, Software Architecture, and Interface
+    Engineering </title>
+  <link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/plugins/owl-carousel/owl.theme.default.min.css" rel="stylesheet">
+  <link href="assets/plugins/magnific-popup/magnific-popup.min.css" rel="stylesheet">
+  <link href="assets/css/app.css" rel="stylesheet">
+  <link href="assets/plugins/font-awesome/css/all.css" rel="stylesheet">
+  <link href="assets/plugins/themify/themify-icons.min.css" rel="stylesheet">
+  <link href="assets/images/favicon.png" rel="icon" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ECQP0N7FX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-2ECQP0N7FX');
+  </script>
+
 </head>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2ECQP0N7FX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2ECQP0N7FX');
-</script>
 
 <body data-preloader="1" data-spy="scroll" data-target=".navbar">
   <header>
 
     <!-- Nav -->
     <nav class="navbar navbar-absolute navbar-fixed">
-      <div class="container"> 
+      <div class="container">
         <a class="navbar-brand" href="index.html">
           <h5>jason cook design.</h5>
         </a>
-        <ul class="nav">
-          <li class="nav-item"> <a class="nav-link" href="index.html#work">Work</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="index.html#services">Services</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="index.html#contact">Contact</a> </li>
-        </ul> 
-        <button class="nav-toggle-btn"> <span class="lines"></span></button>
+        <ul class="nav" id="navbarNav">
+          <li class="nav-item"><a class="nav-link" href="index.html#work">Work</a> </li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a> </li>
+          <li class="nav-item"><a class="nav-link" href="index.html#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a> </li>
+        </ul>
+        <button class="nav-toggle-btn" type="button" data-toggle="collapse" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="lines"></span>
+        </button>
       </div>
-    </nav> 
+    </nav>
 
     <!-- Prefold -->
     <div class="section-xl bg-image parallax" style="background-image: url(assets/images/background_cs03.jpg)">
@@ -63,7 +71,7 @@
       </div>
     </div>
   </header>
-  
+
   <!-- Content -->
   <div class="section">
     <div class="container">
@@ -71,42 +79,57 @@
         <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
           <div class="margin-bottom-30">
             <h2>The challenge</h2>
-            <p class="margin-bottom-20"> When experts from the world leader in point-of-sale technology left to form a startup, they had lots of big ideas but didn't have a product yet. They brought their vision to my consultancy to <strong>prototype a next-generation point-of-sale system</strong> for in-store, handheld, kiosk, and drive-thru touchpoints. </p>
-            <img src="assets/images/cs03_04.jpg" alt="architecture diagram and early mockup" />
+            <p class="margin-bottom-20"> When experts from the world leader in point-of-sale technology left to form a
+              startup, they had lots of big ideas but didn't have a product yet. They brought their vision to my
+              consultancy to <strong>prototype a next-generation point-of-sale system</strong> for in-store, handheld,
+              kiosk, and drive-thru touchpoints. </p>
+            <img src="assets/images/cs03_04.jpg" alt="architecture diagram and early mockup">
           </div>
           <div class="margin-bottom-30">
             <h2>The opportunity</h2>
-            <p class="margin-bottom-20"> By leveraging new gesture libraries from Microsoft, some of which we developed, we went from concept sketches to a working prototype in record time. </p>
-            <img class="margin-bottom-20" src="assets/images/cs03_03.jpg" alt="mockup and running code" />
-            <p class="margin-bottom-20"> The prototype showcased the slick interactions the iPad generation had become accustomed to — swipe, flick-and-catch, pinch, and zoom — yet ran on the inexpensive commodity Windows devices fast-casual restaurants rely on. It was exactly the solution the industry needed. </p>
-            <img src="assets/images/cs03_02.jpg" alt="full size screenshot" />
+            <p class="margin-bottom-20"> By leveraging new gesture libraries from Microsoft, some of which we developed,
+              we went from concept sketches to a working prototype in record time. </p>
+            <img class="margin-bottom-20" src="assets/images/cs03_03.jpg" alt="mockup and running code">
+            <p class="margin-bottom-20"> The prototype showcased the slick interactions the iPad generation had become
+              accustomed to — swipe, flick-and-catch, pinch, and zoom — yet ran on the inexpensive commodity Windows
+              devices fast-casual restaurants rely on. It was exactly the solution the industry needed. </p>
+            <img src="assets/images/cs03_02.jpg" alt="full size screenshot">
           </div>
           <div class="margin-bottom-30">
             <h2>The result</h2>
-            <p class="margin-bottom-20"> The client used that prototype to showcase the capabilities of their fledgling company, attract an enthusiastic customer base, and ultimately secure $10 million in funding. Today, the product we designed enables millions of monthly transactions across the US, and the company boasts <strong>100% enterprise client retention</strong>. </p>
-            <img src="assets/images/cs03_01.jpg" alt="device image" />
+            <p class="margin-bottom-20"> The client used that prototype to showcase the capabilities of their fledgling
+              company, attract an enthusiastic customer base, and ultimately secure $10 million in funding. Today, the
+              product we designed enables millions of monthly transactions across the US, and the company boasts
+              <strong>100% enterprise client retention</strong>.
+            </p>
+            <img src="assets/images/cs03_01.jpg" alt="device image">
           </div>
-          
+
           <!-- Pagination -->
           <div>
-            <a href="cs02.html" role="button" class="btn float-left"> <i class="ti-angle-left mr-3"></i><span>Previous Case Study</span></a>
-            <a href="cs04.html" role="button" class="btn float-right"> <span>Next Case Study</span><i class="ti-angle-right ml-3"></i></a>
+            <a href="cs02.html" role="button" class="btn float-left"> <i class="ti-angle-left mr-3"></i><span>Previous
+                Case Study</span></a>
+            <a href="cs04.html" role="button" class="btn float-right"> <span>Next Case Study</span><i
+                class="ti-angle-right ml-3"></i></a>
           </div>
 
         </div>
       </div>
-      
+
     </div>
   </div>
-  
+
   <!-- Testimonial -->
   <div class="section bg-grey-lighter">
     <div class="container text-center">
       <div class="row">
         <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3"> <img
-            class="img-circle-lg margin-bottom-20" src="assets/images/p09.jpg" alt="Brett Guidry, Vice President of Customer Experience" />
+            class="img-circle-lg margin-bottom-20" src="assets/images/p09.jpg"
+            alt="Brett Guidry, Vice President of Customer Experience">
           <h5>Brett Guidry, Vice President of Customer Experience</h5>
-          <p> "The amount of dissatisfaction and frustration in restaurants was stronger than we thought. This interface is so easy to use it makes training a breeze. The staff picked it up very quickly. It didn’t make them feel dumb. I see people smiling when they use it." </p>
+          <p> "The amount of dissatisfaction and frustration in restaurants was stronger than we thought. This interface
+            is so easy to use it makes training a breeze. The staff picked it up very quickly. It didn’t make them feel
+            dumb. I see people smiling when they use it." </p>
         </div>
       </div>
     </div>
@@ -118,21 +141,29 @@
       <div class="section-title text-center">
         <h6 class="heading-uppercase">Contact</h6>
         <h2>Get in touch</h2>
-        <p>Together, we can create applications that launch startups, platforms that power ecosystems, or experiences that transform enterprises. Let's make something amazing.</p>
+        <p>Together, we can create applications that launch startups, platforms that power ecosystems, or experiences
+          that transform enterprises. Let's make something amazing.</p>
       </div>
       <div class="row text-center">
-        <div class="col-12 col-sm-6 col-md-3 icon-3xl"><a href="mailto:hello@jasoncookdesign.com" target="_blank"><i class="ti ti-email text-dark"></i>
-          <h6 class="font-weight-normal margin-top-20">Email</h6>hello@jasoncookdesign.com</a>
+        <div class="col-12 col-sm-6 col-md-3 icon-3xl"><a href="mailto:hello@jasoncookdesign.com" target="_blank"><i
+              class="ti ti-email text-dark"></i>
+            <h6 class="font-weight-normal margin-top-20">Email</h6>hello@jasoncookdesign.com
+          </a>
         </div>
-        <div class="col-12 col-sm-6 col-md-3 icon-3xl"><a href="tel:1-512-887-2665" target="_blank"><i class="ti ti-mobile text-dark"></i>
-          <h6 class="font-weight-normal margin-top-20">Phone</h6>+1 (512) 887-COOK</a>
+        <div class="col-12 col-sm-6 col-md-3 icon-3xl"><a href="tel:1-512-887-2665" target="_blank"><i
+              class="ti ti-mobile text-dark"></i>
+            <h6 class="font-weight-normal margin-top-20">Phone</h6>+1 (512) 887-COOK
+          </a>
         </div>
-          <div class="col-12 col-sm-6 col-md-3 icon-3xl"><a href="https://www.linkedin.com/in/jasoncookdesign" target="_blank"><i class="ti-linkedin text-dark"></i>
-            <h6 class="font-weight-normal margin-top-20">LinkedIn</h6>jasoncookdesign</a>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3 icon-3xl"><a href="https://www.calendly.com/jasoncookdesign" target="_blank"><i class="ti-calendar text-dark"></i>
-            <h6 class="font-weight-normal margin-top-20">Book a Meeting</h6>jasoncookdesign</a>
-          </div>
+        <div class="col-12 col-sm-6 col-md-3 icon-3xl"><a href="https://www.linkedin.com/in/jasoncookdesign"
+            target="_blank"><i class="ti-linkedin text-dark"></i>
+            <h6 class="font-weight-normal margin-top-20">LinkedIn</h6>jasoncookdesign
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 icon-3xl"><a href="https://www.calendly.com/jasoncookdesign"
+            target="_blank"><i class="ti-calendar text-dark"></i>
+            <h6 class="font-weight-normal margin-top-20">Book a Meeting</h6>jasoncookdesign
+          </a>
         </div>
       </div>
     </div>
@@ -143,13 +174,16 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-lg text-center text-lg-left">
-            <p> &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Jason Cook Design LLC, All Rights Reserved<br />Made with <i class="ti-heart"></i> in Austin, Texas </p>
+            <p> &copy;
+              <script>document.write(new Date().getFullYear());</script> Jason Cook Design LLC,
+              All Rights Reserved<br>Made with <i class="ti-heart"></i> in Austin, Texas
+            </p>
           </div>
         </div>
       </div>
     </div>
   </footer>
-  
+
   <!-- Libraries -->
   <script src="assets/plugins/jquery.min.js"></script>
   <script src="assets/plugins/bootstrap/popper.min.js"></script>
