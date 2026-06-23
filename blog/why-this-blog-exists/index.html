@@ -33,10 +33,15 @@
   <!-- Blog typography (scoped; layers on app.css) -->
   <style>
     .blog-measure { max-width: 720px; margin-left: auto; margin-right: auto; }
+    /* Section rhythm: white heading band → grey reading band → white contact → dark footer. */
+    .blog-head { padding: 2rem 0 2.25rem; }
+    .blog-content { padding: 2.75rem 0 3.25rem; }
     .blog-eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; color: #8a8a8a; }
-    .blog-post-meta { color: #8a8a8a; font-size: .95rem; margin-bottom: 2rem; }
+    .blog-post-meta { color: #8a8a8a; font-size: .95rem; margin: 0 0 0; }
+    .blog-tags { margin-top: 1.25rem; }
     .blog-tag { display: inline-block; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
-      color: #555; background: #f1f1f1; border-radius: 999px; padding: .2rem .7rem; margin: 0 .35rem .35rem 0; }
+      color: #555; background: #fff; border: 1px solid #ddd; border-radius: 999px;
+      padding: .2rem .7rem; margin: 0 .35rem .4rem 0; }
     .blog-body { font-size: 1.12rem; line-height: 1.75; color: #2a2a2a; }
     .blog-body h2 { font-size: 1.7rem; margin: 2.4rem 0 .9rem; line-height: 1.25; }
     .blog-body h3 { font-size: 1.3rem; margin: 1.9rem 0 .7rem; }
@@ -47,7 +52,7 @@
     .blog-body a:hover { color: #000; }
     .blog-body blockquote { border-left: 3px solid #111; margin: 1.6rem 0; padding: .2rem 0 .2rem 1.3rem;
       color: #444; font-style: italic; }
-    .blog-body code { background: #f4f4f4; border-radius: 4px; padding: .12em .4em; font-size: .92em; }
+    .blog-body code { background: #e7e7e7; border-radius: 4px; padding: .12em .4em; font-size: .92em; }
     .blog-body pre { background: #1d1d1f; color: #f4f4f4; border-radius: 8px; padding: 1.1rem 1.3rem;
       overflow-x: auto; margin: 0 0 1.4rem; }
     .blog-body pre code { background: transparent; color: inherit; padding: 0; font-size: .9rem; }
@@ -96,14 +101,22 @@
     </nav>
   </header>
 
-  <!-- Post -->
-  <article class="section">
+  <!-- Post heading -->
+  <div class="blog-head">
     <div class="container">
       <div class="blog-measure">
         <p class="blog-eyebrow">Writing</p>
         <h1>Why This Blog Exists</h1>
         <p class="blog-post-meta"><time datetime="2026-06-23">June 23, 2026</time></p>
         <div class="blog-tags"><span class="blog-tag">design</span><span class="blog-tag">technology</span><span class="blog-tag">ai</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Post body -->
+  <div class="blog-content bg-grey">
+    <div class="container">
+      <div class="blog-measure">
         <div class="blog-body">
           <p>I have spent a long time at the seam between design and engineering — close enough to the build to be accountable for it, close enough to the user to be accountable for them too. This is where I'm going to write about what I find there.</p>
 <h2>What this is for</h2>
@@ -128,7 +141,7 @@
         <a class="blog-backlink" href="/blog/"><i class="ti-arrow-left"></i> All writing</a>
       </div>
     </div>
-  </article>
+  </div>
 
   <!-- Contact -->
   <div id="contact" class="section-lg">

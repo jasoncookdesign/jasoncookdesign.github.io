@@ -31,18 +31,23 @@
   <!-- Blog listing typography (scoped; layers on app.css) -->
   <style>
     .blog-measure { max-width: 760px; margin-left: auto; margin-right: auto; }
-    .blog-lede { color: #6f6f6f; font-size: 1.1rem; margin-bottom: 2.5rem; }
+    /* Section rhythm: white heading band → grey reading band → white contact → dark footer. */
+    .blog-head { padding: 2rem 0 1.5rem; }
+    .blog-content { padding: 2.5rem 0 3.25rem; }
+    .blog-lede { color: #6f6f6f; font-size: 1.1rem; margin: 0; }
     .post-list { list-style: none; padding: 0; margin: 0; }
-    .post-list-item { padding: 1.8rem 0; border-top: 1px solid #ececec; }
-    .post-list-item:first-child { border-top: 0; }
+    .post-list-item { padding: 1.8rem 0; border-top: 1px solid #e2e2e2; }
+    .post-list-item:first-child { border-top: 0; padding-top: 0; }
     .post-list-item h2 { font-size: 1.5rem; margin: 0 0 .35rem; line-height: 1.3; }
     .post-list-item h2 a { color: #1a1a1a; text-decoration: none; }
     .post-list-item h2 a:hover { color: #000; text-decoration: underline; text-underline-offset: 3px; }
-    .post-list-meta { color: #9a9a9a; font-size: .85rem; text-transform: uppercase; letter-spacing: .08em;
+    .post-list-meta { color: #8f8f8f; font-size: .85rem; text-transform: uppercase; letter-spacing: .08em;
       margin-bottom: .6rem; }
     .post-list-excerpt { color: #444; font-size: 1.02rem; line-height: 1.6; margin: 0; }
+    .post-list-tags { margin-top: .7rem; }
     .blog-tag { display: inline-block; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
-      color: #555; background: #f1f1f1; border-radius: 999px; padding: .2rem .7rem; margin: .6rem .35rem 0 0; }
+      color: #555; background: #fff; border: 1px solid #ddd; border-radius: 999px;
+      padding: .2rem .7rem; margin: 0 .35rem .4rem 0; }
     /* Blog pages have no dark hero, so the over-hero transparent nav variant is
        dropped (navbar-fixed only). Keep the solid bar readable + clear its height. */
     body { padding-top: 80px; }
@@ -86,12 +91,20 @@
     </nav>
   </header>
 
-  <!-- Listing -->
-  <div class="section">
+  <!-- Listing heading -->
+  <div class="blog-head">
     <div class="container">
       <div class="blog-measure">
         <h1>Writing</h1>
         <p class="blog-lede">Notes on design, technology, and building with AI.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Listing -->
+  <div class="blog-content bg-grey">
+    <div class="container">
+      <div class="blog-measure">
         <ul class="post-list">
 <!-- BEGIN POST_CARD -->
           <li class="post-list-item">
