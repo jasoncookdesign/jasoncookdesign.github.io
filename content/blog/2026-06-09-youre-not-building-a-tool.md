@@ -4,7 +4,12 @@ date: 2026-06-09
 slug: youre-not-building-a-tool-youre-building-an-organization
 tags: [ai, security, software-development]
 excerpt: "RTX Spark puts a petaflop of AI power into a laptop. Soon, many builders will run autonomous agents on it, often without any real governance. The hardware problem is solved. The governance problem isn't."
+cover_image: assets/blog/youre-not-building-a-tool/hero.jpg
 ---
+
+![A circuit board with a prominent chip labeled "AI"](/assets/blog/youre-not-building-a-tool/hero.jpg)
+
+*Photo by [Igor Omilaev](https://unsplash.com/@omilaev) on [Unsplash](https://unsplash.com)*
 
 Think about this situation before you get started.
 
@@ -45,6 +50,8 @@ These aren't rare edge cases. They're the normal situation for most agent deploy
 Over centuries, human organizations learned that capability without governance leads to chaos. Budgets, permissions, audit trails, escalation paths, and org charts don't exist because we distrust workers. They exist because coordination is difficult, and the impact of mistakes grows with authority. Llama.cpp doesn't come with any of that built-in knowledge.
 
 ## What treating it like an organization looks like
+
+![Governance structure diagram for organization of autonomous agents](/assets/blog/youre-not-building-a-tool/governance-diagram.png)
 
 I built a framework around a simple idea: if you're running autonomous agents with real authority, treat them like employees in an organization, not just scripts.
 
