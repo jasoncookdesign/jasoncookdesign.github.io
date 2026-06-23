@@ -1,0 +1,8 @@
+{
+  "content": "content/blog",
+  "templates": "templates/blog",
+  "out": "blog",
+  "site_title": "Jason Cook Design",
+  "blog_url": "https://jasoncookdesign.com/blog",
+  "author": "Jason Cook"
+}
