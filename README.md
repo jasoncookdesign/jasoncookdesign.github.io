@@ -14,6 +14,7 @@ Jason Cook Design is an Austin-based consultancy offering experience design, UX/
 - **Font Awesome + Themify Icons** — icon sets (bundled locally)
 - **Custom CSS** — `assets/css/app.css`
 - **Google Analytics (GA4)** — tag `G-2ECQP0N7FX`
+- **Blog** — Markdown posts rendered to committed static HTML by a small generator (no CMS, no build server, no CI); see [Writing (Blog)](#writing-blog)
 
 ## Structure
 
@@ -34,6 +35,10 @@ CNAME                       GitHub Pages custom domain config
 assets/                     CSS, JS, images, bundled plugin assets
 calendar/                   Scheduling/calendar page
 archive/                    Legacy assets (not linked from live site)
+blog/                       GENERATED blog — listing, per-post pages, RSS (do not hand-edit)
+content/blog/               Blog post sources (Markdown + YAML frontmatter)
+templates/blog/             Blog templates (post.html, index.html)
+blog.config.json            Blog generator config (paths + site metadata)
 ```
 
 ## Development
@@ -60,3 +65,50 @@ This repo is deployed via **GitHub Pages**. Merging to `main` on the canonical r
 2. Update the title, meta description, and all content sections in the new file
 3. Add a card/link to the work grid in `index.html`
 4. Open a PR from the `jcduser01` fork
+
+## Writing (Blog)
+
+The `/blog/` section is long-form writing on design, technology, and AI, reachable from the **Writing** link in the main navigation. It keeps the site's "commit static HTML, no server" model: posts are authored in Markdown and rendered to static HTML by a small generator, and the **rendered HTML is committed** — there is no CMS, build server, or CI.
+
+### How it fits together
+
+```
+content/blog/<YYYY-MM-DD-slug>.md   Post source (Markdown + YAML frontmatter)
+templates/blog/post.html            Per-post template (site chrome + typography)
+templates/blog/index.html           Listing template; the card between
+                                     <!-- BEGIN POST_CARD --> / <!-- END POST_CARD -->
+                                     repeats once per published post
+blog/index.html                     GENERATED listing
+blog/<slug>/index.html              GENERATED post page
+blog/feed.xml                       GENERATED RSS feed
+blog.config.json                    Generator config (source/template/output paths + site metadata)
+```
+
+The `blog/` directory is generated output — do not hand-edit it. Edit the Markdown source or the templates, then regenerate.
+
+### Post frontmatter
+
+```yaml
+title:         "Required — post title"
+date:          2026-06-23          # required; ISO date; drives ordering + RSS
+slug:          optional            # derived from the title if omitted
+tags:          [design, ai]        # optional
+excerpt:       "One-line summary"  # listing + meta description + og:description; auto-derived if omitted
+draft:         false               # true = the post is skipped by the generator
+cover_image:   assets/blog/x.jpg   # optional; used for the social/og:image
+canonical_url: optional            # optional; set when the post is also published elsewhere
+```
+
+### Publishing a post
+
+1. Add `content/blog/<YYYY-MM-DD-slug>.md` with frontmatter and a Markdown body.
+2. Regenerate with the blog generator (Python; requires the `markdown` and `pyyaml` packages), pointing it at `blog.config.json`. It renders every non-draft post and (re)writes the `blog/` directory deterministically.
+3. Commit the new Markdown **and** the regenerated `blog/` files, then open a PR from the `jcduser01` fork. Merging to canonical `main` publishes to [jasoncookdesign.com/blog/](https://jasoncookdesign.com/blog/).
+
+### Local preview
+
+Blog asset links are root-relative (`/assets/...`), so preview by serving the **repo root** and visiting `/blog/`:
+
+```bash
+python3 -m http.server 8000   # then open http://localhost:8000/blog/
+```
