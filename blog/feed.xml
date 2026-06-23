@@ -12,5 +12,12 @@
       <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
       <description>A short note on what this space is for — and why a working designer-engineer keeps a public notebook.</description>
     </item>
+    <item>
+      <title>You're Not Building a Tool. You're Building an Organization. Treat it That Way.</title>
+      <link>https://jasoncookdesign.com/blog/youre-not-building-a-tool-youre-building-an-organization/</link>
+      <guid isPermaLink="true">https://jasoncookdesign.com/blog/youre-not-building-a-tool-youre-building-an-organization/</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>RTX Spark puts a petaflop of AI power into a laptop. Soon, many builders will run autonomous agents on it, often without any real governance. The hardware problem is solved. The governance problem isn't.</description>
+    </item>
   </channel>
 </rss>
