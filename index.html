@@ -456,6 +456,62 @@
     </div>
   </div>
 
+  <!-- Calendar -->
+  <div id="calendar" class="section">
+    <div class="container">
+      <div class="section-title text-center">
+        <h6 class="heading-uppercase">Calendar</h6>
+        <h2>Book a time</h2>
+        <p class="font-large">Pick a slot that works for you and let's talk.</p>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <!-- Cal.com inline profile embed — surfaces all event types for jasoncookdesign. Always visible (no toggle). -->
+          <div id="cal-inline" style="width:100%;min-height:640px;overflow:auto"></div>
+          <script type="text/javascript">
+            (function (C, A, L) {
+              let p = function (a, ar) { a.q.push(ar); };
+              let d = C.document;
+              C.Cal = C.Cal || function () {
+                let cal = C.Cal;
+                let ar = arguments;
+                if (!cal.loaded) {
+                  cal.ns = {};
+                  cal.q = cal.q || [];
+                  d.head.appendChild(d.createElement("script")).src = A;
+                  cal.loaded = true;
+                }
+                if (ar[0] === L) {
+                  const api = function () { p(api, arguments); };
+                  const namespace = ar[1];
+                  api.q = api.q || [];
+                  if (typeof namespace === "string") {
+                    cal.ns[namespace] = cal.ns[namespace] || api;
+                    p(cal.ns[namespace], ar);
+                    p(cal, ["initNamespace", namespace]);
+                  } else p(cal, ar);
+                  return;
+                }
+                p(cal, ar);
+              };
+            })(window, "https://app.cal.com/embed/embed.js", "init");
+            Cal("init", { origin: "https://cal.com" });
+            Cal("inline", {
+              elementOrSelector: "#cal-inline",
+              calLink: "jasoncookdesign",
+              layout: "month_view"
+            });
+            Cal("ui", {
+              hideEventTypeDetails: false,
+              layout: "month_view",
+              styles: { branding: { brandColor: "#000000" } }
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FAQ -->
   <div class="section">
     <div class="container">
