@@ -63,9 +63,13 @@ This repo is deployed via **GitHub Pages**. Merging to `main` on the canonical r
 
 Booking is handled by [Cal.com](https://cal.com) on the shared `jasoncookdesign` account ([cal.com/jasoncookdesign](https://cal.com/jasoncookdesign)). This replaces the previous Google Appointments redirect pages.
 
-The homepage carries an always-visible inline Cal.com **profile** embed (all event types) in the `#calendar` section, between `#pricing` and the FAQ. It uses the official `embed.js` snippet with `calLink: "jasoncookdesign"` and `layout: "month_view"`. The section is anchor-reachable at [jasoncookdesign.com/#calendar](https://jasoncookdesign.com/#calendar) — there is no nav entry.
+The homepage carries an always-visible booking widget in the `#calendar` section, between `#pricing` and the FAQ. The section is anchor-reachable at [jasoncookdesign.com/#calendar](https://jasoncookdesign.com/#calendar) — there is no nav entry.
 
-The six live event types are: `meeting` (15m / 30m / 60m), `coffee` (30m), `breakfast` (60m), `lunch` (60m), `dinner` (90m), and `studio` (120m / 180m / 240m). The `studio` event is shared with dysonhope.com.
+Rather than the Cal.com profile (event-list) view, the widget uses a **native button bar** of hard-coded event types. Each button loads that event's Cal.com booking picker directly into an `<iframe>` below the bar (skipping the event-list view); exactly one type is selected at a time, defaulting to `meeting` on load. The buttons reuse the site's own `.button` classes (`.button-dark` marks the active type), and the event slugs are hard-coded — they don't change, so there's no profile lookup.
+
+The picker iframe is loaded with `?embed=true&theme=light&brandColor=141414&hideEventTypeDetails=false&layout=month_view`. `theme=light` and `brandColor` are set here only, so this embed stays visually independent of the Dyson Hope embed on the same shared Cal.com account.
+
+**Event types shown on this page** (hard-coded button bar): `meeting` (15m / 30m / 60m), `coffee` (30m), `breakfast` (60m), `lunch` (60m), `dinner` (90m). The shared `studio` event (120m / 180m / 240m, also used by dysonhope.com) is **intentionally omitted** from the JCD button bar — it is not a JCD-facing offering. The legacy `/calendar/studio/` route still redirects to it so existing direct links keep working.
 
 ### Legacy `/calendar/` redirects
 

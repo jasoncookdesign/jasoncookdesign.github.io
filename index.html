@@ -462,53 +462,58 @@
       <div class="section-title text-center">
         <h6 class="heading-uppercase">Calendar</h6>
         <h2>Book a time</h2>
-        <p class="font-large">Pick a slot that works for you and let's talk.</p>
+        <p class="font-large">Choose a meeting type, then pick a slot that works for you.</p>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <!-- Cal.com inline profile embed — surfaces all event types for jasoncookdesign. Always visible (no toggle). -->
-          <div id="cal-inline" style="width:100%;min-height:640px;overflow:auto"></div>
-          <script type="text/javascript">
-            (function (C, A, L) {
-              let p = function (a, ar) { a.q.push(ar); };
-              let d = C.document;
-              C.Cal = C.Cal || function () {
-                let cal = C.Cal;
-                let ar = arguments;
-                if (!cal.loaded) {
-                  cal.ns = {};
-                  cal.q = cal.q || [];
-                  d.head.appendChild(d.createElement("script")).src = A;
-                  cal.loaded = true;
-                }
-                if (ar[0] === L) {
-                  const api = function () { p(api, arguments); };
-                  const namespace = ar[1];
-                  api.q = api.q || [];
-                  if (typeof namespace === "string") {
-                    cal.ns[namespace] = cal.ns[namespace] || api;
-                    p(cal.ns[namespace], ar);
-                    p(cal, ["initNamespace", namespace]);
-                  } else p(cal, ar);
-                  return;
-                }
-                p(cal, ar);
-              };
-            })(window, "https://app.cal.com/embed/embed.js", "init");
-            Cal("init", { origin: "https://cal.com" });
-            Cal("inline", {
-              elementOrSelector: "#cal-inline",
-              calLink: "jasoncookdesign",
-              layout: "month_view"
-            });
-            Cal("ui", {
-              hideEventTypeDetails: false,
-              layout: "month_view",
-              styles: { branding: { brandColor: "#000000" } }
-            });
-          </script>
-        </div>
+
+      <!-- Scoped styles for the booking type bar + picker (kept inline so the section is self-contained). -->
+      <style>
+        #calendar .cal-typebar { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 36px; }
+        #calendar .cal-typebar .button { cursor: pointer; -webkit-appearance: none; appearance: none; font-family: inherit; font-size: 14px; line-height: 1.2; }
+        #calendar .cal-frame-wrap { max-width: 1040px; margin: 0 auto; }
+        #calendar #cal-frame { width: 100%; min-height: 720px; border: none; display: block; }
+      </style>
+
+      <!-- Native button bar — hard-coded event types (Studio is intentionally omitted here).
+           One is selected at a time; clicking swaps the Cal.com picker below. -->
+      <div class="cal-typebar" role="group" aria-label="Choose a meeting type">
+        <button type="button" class="button button-sm button-rounded button-dark" data-cal-slug="meeting" aria-pressed="true">Meeting</button>
+        <button type="button" class="button button-sm button-rounded" data-cal-slug="coffee" aria-pressed="false">Coffee</button>
+        <button type="button" class="button button-sm button-rounded" data-cal-slug="breakfast" aria-pressed="false">Breakfast</button>
+        <button type="button" class="button button-sm button-rounded" data-cal-slug="lunch" aria-pressed="false">Lunch</button>
+        <button type="button" class="button button-sm button-rounded" data-cal-slug="dinner" aria-pressed="false">Dinner</button>
       </div>
+
+      <!-- Cal.com per-event picker. theme=light + brandColor are set here only, so this stays
+           visually independent of the Dyson Hope embed on the shared Cal.com account. -->
+      <div class="cal-frame-wrap">
+        <iframe id="cal-frame"
+          src="https://cal.com/jasoncookdesign/meeting?embed=true&theme=light&brandColor=141414&hideEventTypeDetails=false&layout=month_view"
+          title="Book a meeting with Jason Cook Design"
+          loading="lazy"></iframe>
+      </div>
+
+      <script type="text/javascript">
+        (function () {
+          var bar = document.querySelector('#calendar .cal-typebar');
+          var frame = document.getElementById('cal-frame');
+          if (!bar || !frame) return;
+          var base = 'https://cal.com/jasoncookdesign/';
+          var params = '?embed=true&theme=light&brandColor=141414&hideEventTypeDetails=false&layout=month_view';
+          bar.addEventListener('click', function (e) {
+            var btn = e.target.closest('button[data-cal-slug]');
+            if (!btn) return;
+            var slug = btn.getAttribute('data-cal-slug');
+            var buttons = bar.querySelectorAll('button[data-cal-slug]');
+            for (var i = 0; i < buttons.length; i++) {
+              var on = buttons[i] === btn;
+              buttons[i].classList.toggle('button-dark', on);
+              buttons[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+            }
+            frame.src = base + slug + params;
+            frame.title = 'Book a ' + (btn.textContent || '').trim().toLowerCase() + ' with Jason Cook Design';
+          });
+        })();
+      </script>
     </div>
   </div>
 
