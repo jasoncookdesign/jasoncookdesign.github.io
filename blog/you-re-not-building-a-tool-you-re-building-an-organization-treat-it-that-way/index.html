@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="RTX Spark puts a petaflop of AI power into a laptop. Soon, many builders will run autonomous agents on it, often without any real governance. The hardware problem is solved. The governance problem isn&#x27;t.">
   <title>You&#x27;re Not Building a Tool. You&#x27;re Building an Organization. Treat it That Way. | Jason Cook Design</title>
-  <link rel="canonical" href="https://jasoncookdesign.com/blog/youre-not-building-a-tool-youre-building-an-organization/">
+  <link rel="canonical" href="https://jasoncookdesign.com/blog/you-re-not-building-a-tool-you-re-building-an-organization-treat-it-that-way/">
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="You&#x27;re Not Building a Tool. You&#x27;re Building an Organization. Treat it That Way.">
   <meta property="og:description" content="RTX Spark puts a petaflop of AI power into a laptop. Soon, many builders will run autonomous agents on it, often without any real governance. The hardware problem is solved. The governance problem isn&#x27;t.">
-  <meta property="og:url" content="https://jasoncookdesign.com/blog/youre-not-building-a-tool-youre-building-an-organization/">
+  <meta property="og:url" content="https://jasoncookdesign.com/blog/you-re-not-building-a-tool-you-re-building-an-organization-treat-it-that-way/">
   <meta property="og:site_name" content="Jason Cook Design">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -118,9 +118,7 @@
     <div class="container">
       <div class="blog-measure">
         <div class="blog-body">
-          <p><img alt="A circuit board with a prominent chip labeled &quot;AI&quot;" src="/assets/blog/youre-not-building-a-tool/hero.jpg"></p>
-<p><em>Photo by <a href="https://unsplash.com/@omilaev">Igor Omilaev</a> on <a href="https://unsplash.com">Unsplash</a></em></p>
-<p>Think about this situation before you get started.</p>
+          <p>Think about this situation before you get started.</p>
 <p>Imagine your research agent finds a credentials file it wasn't supposed to access. It's just doing its job, gathering context. It hands this information to your coding agent, which uses it to authenticate an API call and make a commit. Your operations agent logs the commit, but not the credential access, because that happened in a different process with a separate audit trail. By the time you notice something is off, three things have happened that you didn't approve, can't fully track, and can't easily fix.</p>
 <p>There's no hacker involved. No strange exploit. It's just agents doing what they were built to do, using the authority you gave them, often without clear limits.</p>
 <p>Most builders aren't thinking about this kind of problem. The new hardware coming out this fall makes it even more likely.</p>
@@ -140,7 +138,6 @@
 <p>These aren't rare edge cases. They're the normal situation for most agent deployments. Systems are built for capability, and governance is often added later or not at all.</p>
 <p>Over centuries, human organizations learned that capability without governance leads to chaos. Budgets, permissions, audit trails, escalation paths, and org charts don't exist because we distrust workers. They exist because coordination is difficult, and the impact of mistakes grows with authority. Llama.cpp doesn't come with any of that built-in knowledge.</p>
 <h2>What treating it like an organization looks like</h2>
-<p><img alt="Governance structure diagram for organization of autonomous agents" src="/assets/blog/youre-not-building-a-tool/governance-diagram.png"></p>
 <p>I built a framework around a simple idea: if you're running autonomous agents with real authority, treat them like employees in an organization, not just scripts.</p>
 <p>Here's what that looks like: a Research Director role can browse the web and update the knowledge base, but can't send email or run code, and is limited to $50 per month in external API costs. An Engineering Director can read and write code, but can't push to production without human approval. An Operations Director can move files through an approved airlock, but can't access anything outside the sandbox. Every role has clear capabilities, and each has a defined worst-case outcome — a maximum acceptable loss — after which the action must be escalated rather than handled automatically.</p>
 <p>The hardest design decision, beyond technical choices, is how agents behave. They should be set up to escalate when they're unsure, not to guess. An agent that stops and asks is more trustworthy than one that just fills in the blanks. Most agent frameworks focus on finishing tasks. This one focuses on knowing when not to act.</p>
@@ -199,7 +196,7 @@
           </a>
         </div>
         <div class="col-12 col-sm-6 col-md-3 icon-3xl">
-          <a href="/#calendar">
+          <a href="https://www.calendly.com/jasoncookdesign" target="_blank">
             <i class="ti-calendar text-dark"></i>
             <h6 class="font-weight-normal margin-top-20">Book a Meeting</h6>jasoncookdesign
           </a>
