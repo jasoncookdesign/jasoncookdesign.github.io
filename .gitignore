@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Thumbnails
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# SCSS cache (compiled CSS is intentionally committed)
+.sass-cache/
+.stylelintcache
+
+# Node (in case tooling is added later)
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
