@@ -8,11 +8,20 @@
       "mcp__github__delete_file",
       "Bash(gh pr merge:*)",
       "Bash(gh pr ready:*)",
-      "Bash(gh api:*merge*)",
+      "Bash(gh api *merge*)",
+      "Bash(gh api *Merge*)",
       "Bash(git push origin main:*)",
-      "Bash(git push:* main)",
+      "Bash(git push * main)",
+      "Bash(git push *:main)",
+      "Bash(git push *:refs/heads/main)",
       "Bash(git push --force:*)",
-      "Bash(git push -f:*)"
+      "Bash(git push -f:*)",
+      "Bash(git push *--force*)",
+      "Bash(git push * -f*)",
+      "Bash(git -C * push * main)",
+      "Bash(git -C * push *:main)",
+      "Bash(git -C * push *--force*)",
+      "Bash(git -C * push * -f*)"
     ]
   }
 }
