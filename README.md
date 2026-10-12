@@ -73,7 +73,7 @@ The picker iframe is loaded with `?embed=true&theme=light&brandColor=141414&hide
 
 ### Legacy `/calendar/` redirects
 
-The old `/calendar/` pages are retained only as legacy-compatibility redirects (`<meta http-equiv="refresh" content="0; ...">` plus a `window.location.replace()` JS fallback). The hub returns visitors to the on-site embed; per-type routes go straight to their specific Cal.com event to preserve booking intent from bookmarked or shared links. No Google Appointments URLs remain.
+The old `/calendar/` pages are retained only as legacy-compatibility redirects (a `window.location.replace()` redirect that keeps the query string, so UTM parameters on shared links survive the hop, with a `<meta http-equiv="refresh">` inside `<noscript>` as the no-JavaScript fallback). The hub returns visitors to the on-site embed; per-type routes go straight to their specific Cal.com event to preserve booking intent from bookmarked or shared links. No Google Appointments URLs remain.
 
 | Page | Redirect target |
 |---|---|
